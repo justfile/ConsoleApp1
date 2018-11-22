@@ -1,12 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Linq;
 
 namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            //CallInternetBrowser(args);
+
+            //Chapter6.NewMethod();
+            //Chapter6.NewMethod1();
+            //Chapter6.NewMethod2();
+
+            Chapter6.Chapter6_Main();
+
+            Console.Read();
+        }
+
+
+        private static void CallInternetBrowser(string[] args)
         {
             string query = string.Empty;
             if (args.Length > 0)
@@ -18,8 +35,8 @@ namespace ConsoleApp1
                 //System.Diagnostics.Process.Start("https://www.google.co.kr/search?q=test");
                 OpenBrowser("https://www.google.co.kr/search?q=test");
             }
-            
         }
+
 
         public static void OpenBrowser(string url)
         {
